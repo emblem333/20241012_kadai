@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./style.css">
+  <title>ecshop</title>
+</head>
+
+<header>
+  <div class="header__menu">
+      <h1>device shop</h1>
+      <div class="header__navigation">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Topic</a></li>
+        </ul>
+      </div>
+  </div>
+</header>
+
+<body>
+<div class="filters__wrap sticky-filters">
+  <div class="filters">
+    <div class="sort__wrap category-filter">
+      <input type="text" id="search" placeholder="商品名で検索">
+      <select id="sort">
+        <option value="default">表示順</option>
+        <option value="price-asc">価格の安い順</option>
+        <option value="price-desc">価格の高い順</option>
+      </select>
+      <select id="category">
+        <option value="all">すべてのカテゴリ</option>
+        <option value="furniture">家具</option>
+        <option value="electronics">周辺機器</option>
+        <option value="apparel">アパレル</option>
+      </select>
+    </div>
+    <div class="price-filter__wrap price-range">
+      <input type="number" id="min-price" placeholder="最低価格">
+      <input type="number" id="max-price" placeholder="最高価格">
+      <button id="price-filter-btn">価格で絞り込む</button>
+    </div>
+    <div id="total-items"></div>
+  </div>
+</div>
+
+
+  <!-- <div class="filters__warp">
+    <div class="filters">
+      <div class="sort__wrap">
+        <input type="text" id="search" placeholder="商品名で検索">
+        <select  id="sort">
+          <option value="default">表示順</option>
+          <option value="price-asc">価格の安い順</option>
+          <option value="price-desc">価格の高い順</option>
+        </select>
+        <div id="total-items"></div>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- 追加部分: 価格帯フィルタ -->
+  <!-- <div class="price-range">
+    <label for="min-price">最低価格：</label>
+    <input type="number" id="min-price" placeholder="例: 3000">
+    <label for="max-price">最高価格：</label>
+    <input type="number" id="max-price" placeholder="例: 20000">
+    <button id="price-filter-btn">価格で絞り込む</button>
+  </div> -->
+
+  <!-- 追加部分: カテゴリフィルタ -->
+  <!-- <div class="category-filter">
+    <label for="category">カテゴリ：</label>
+    <select id="category">
+      <option value="all">すべて</option>
+      <option value="furniture">家具</option>
+      <option value="electronics">家電</option>
+      <option value="fashion">ファッション</option>
+    </select>
+  </div> -->
+
+  <div class="search-result__wrap">
+    <div class="search-result">
+      <div id="product-list" class="product-list">
+      </div>
+    </div>
+  </div>
+
+</body>
+<script src="./script.js"></script>
+</html>
